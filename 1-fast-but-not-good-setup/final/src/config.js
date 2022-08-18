@@ -1,11 +1,13 @@
 export const config = {
   firebase: {
-    apiKey: "AIzaSyC0Mlrdz63rpJsUfgJdCXEhZIuJt3LLzMU",
-    authDomain: "frontend-masters-firebase.firebaseapp.com",
-    projectId: "frontend-masters-firebase",
-    storageBucket: "frontend-masters-firebase.appspot.com",
-    messagingSenderId: "66563583985",
-    appId: "1:66563583985:web:e5982c7fe56bf0387d1e50",
-    measurementId: "G-FS54PL4KVB"
+    // Go to the console to get your configuration object
+    apiKey: "AIzaSyCdq5bv5n839JahnO4pGHPuGMX60OUFaz4",
+    authDomain: "james-g-fe-masters-project.firebaseapp.com",
+    projectId: "james-g-fe-masters-project",
+    storageBucket: "james-g-fe-masters-project.appspot.com",
+    messagingSenderId: "176151839226",
+    appId: "1:176151839226:web:1309feb34e5813d5a6e443",
+    measurementId: "G-PWY0VVWBHN"
   },
 };
+

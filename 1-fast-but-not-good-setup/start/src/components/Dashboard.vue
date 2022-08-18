@@ -1,7 +1,14 @@
 <script setup>
 import { onMounted, reactive, onBeforeMount } from 'vue';
 import { useRouter } from 'vue-router';
+import { initializeApp } from 'firebase/app';
+import { config } from '../config'
+import { getFirestore, collection, doc, setDoc, onSnapshot } from 'firebase/firestore'; 
 
+const app = initializeApp(config.firebase);
+
+const db = getFirestore(app);
+const markdownCol = collection(db, 'markdowns');
 const state = reactive({ markdowns: [] });
 const router = useRouter();
 
@@ -10,7 +17,9 @@ onBeforeMount(async () => {
 })
 
 onMounted(() => {
-  
+  onSnapshot(markdownCol, snapshot => {
+    state.markdowns = snapshot.docs.map((d) => ({id: d.id, ...d.data }))
+  })
 })
 
 function newMarkdown() {

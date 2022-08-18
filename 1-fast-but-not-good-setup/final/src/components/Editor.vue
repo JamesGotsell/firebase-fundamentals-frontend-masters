@@ -25,6 +25,7 @@ onMounted(() => {
 function convert(event) {
   const markdown = event.target.value;
   const converted = snarkdown(markdown);
+  // set doc calls the onSnaphot cb
   setDoc(singleDoc, { converted, markdown }, { merge: true });
 }
 
